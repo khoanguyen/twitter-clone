@@ -15,6 +15,12 @@
       <div class="post">
         <%= auto_link(parse(tweet.tweet_text), html: { target: '_blank' }) %>
       </div>
+      <div class="tags">
+      	<span>Tags: </span>
+      	<span class="tag-text">
+      		<%= tweet.tags.to_s.split("#").join(" ") %>
+      	</span>
+      </div>
       <div class="media">
         <%= image_tag tweet.media_url, style: "width: 100%; margin-top: 10px;" if tweet.media? %>
       </div>

@@ -1,4 +1,4 @@
-$('#find_friends').append("<%= j render @users %>");
+$('#find_friends').append("<div class='row'><div class='col-lg-10 col-lg-offset-1'><%= j render @users %></div></div>");
 
 <% if @users.next_page %>
   $(".pagination").replaceWith("<%= j will_paginate(@users) %>");

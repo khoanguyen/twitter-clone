@@ -1,0 +1,9 @@
+<% 
+html = ''
+if !@tag_list.nil? then 
+	@tag_list.each do |k, v|
+	html += '<b><k>' + k + '</b> x ' + v.to_s + '<br>'
+	end 
+end
+%>
+<%= raw(html) %>
